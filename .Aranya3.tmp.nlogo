@@ -160,7 +160,7 @@ end
 to reproduir-aranya
   if ((count other Aranyes-here with [Vida >= 1000] > 0) and (Fertilitat > 799) and Vida >= 1000)
   [
-    hatch 50[ ;Faig un hatch de 50 perque dues aranyes faixin 100 cries per parella
+    hatch 50[ ;Faig un hatch de 50 perque dues aranyes faix
       set shape "spider"
       set color blue
       set size 6
