@@ -181,19 +181,19 @@ to reproduir-aranya
 end
 
 to eat-aranya
-  ifelse count Papallones-here > 0 and count Papallones-here < 5
+  ifelse count Granotes-here with [Vida < 250] > 0
   [
-    let presa one-of Papallones-here
-    ask presa[ morir-Papallones myself]
+    let presa Granotes-here with [Vida < 250]
+    ask presa[ morir-Granotes myself]
     set Inanició  0
     set Menjant 5
     beep
   ]
   [
-    ifelse count Granotes-here with [Vida < 250] > 0
+    ifelse count Papallones-here > 0 and count Papallones-here < 5
     [
-      let presa Granotes-here with [Vida < 250]
-      ask presa[ morir-Granotes myself]
+      let presa one-of Papallones-here
+      ask presa[ morir-Papallones myself]
       set Inanició  0
       set Menjant 5
       beep
